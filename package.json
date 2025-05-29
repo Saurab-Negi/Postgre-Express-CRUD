@@ -1,0 +1,29 @@
+{
+  "name": "postgre-express-crud",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Saurab-Negi/Postgre-Express-CRUD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Saurab-Negi/Postgre-Express-CRUD/issues"
+  },
+  "homepage": "https://github.com/Saurab-Negi/Postgre-Express-CRUD#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "joi": "^17.13.3",
+    "pg": "^8.16.0"
+  }
+}
