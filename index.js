@@ -2,6 +2,9 @@ import express from  'express'
 import cors from 'cors'
 import dotenv from 'dotenv'
 import pool from './src/config/db.js'
+import userRoute from './src/routes/userRoute.js'
+import errorHandling from './src/middlewares/errorHandler.js'
+import { createUserTable } from './src/data/createUserTable.js'
 
 dotenv.config()
 
@@ -17,6 +20,15 @@ app.get('/', async (req, res) => {
 //middlewares
 app.use(express.json())
 app.use(cors())
+
+//error handling
+app.use(errorHandling)
+
+//create table before starting server
+createUserTable()
+
+//routes
+app.use('/', userRoute)
 
 app.listen(port , () => {
     console.log(`Server listening on ${port}`)
